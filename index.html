@@ -6,14 +6,216 @@
 		<title></title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
 		<link rel="stylesheet" href="css/normalize.min.css">
 		<link rel="stylesheet" href="css/main.css">
-
+		<link rel="stylesheet" href="./bower_components/components-bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="./bower_components/components-bootstrap/css/bootstrap-theme.css">
+		<script src="./bower_components/angular/angular.js"></script>
+		<script src="./bower_components/components-bootstrap/js/bootstrap.js"></script>
+    <script src="./js/controller.js"></script>
+		<script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+	  <script type="text/javascript" src="./bower_components/moment/min/moment.min.js"></script>
+	  <script type="text/javascript" src="./bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+	  <link rel="stylesheet" href="./bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+		 <script type="module" src="./bower_components/font-roboto-local/roboto.js"></script>
 	</head>
-	<body>
+	<body ng-app="myApp">
+		<header >
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="col-xs-10 col-sm-5 col-md-3">
+					<img src="./img/logo.png" class="img-responsive"/>
+				</div>
+				<div class="col-sm-6 col-md-3 col-md-offset-6 navbar-navMenu"
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a href="#">Enlace1</a></li>
+							<li><a href="">Enlace2</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-2 col-sm-1">
+					<div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	        </div>
+				</div>
+      </nav>
+		</header>
+	<section>
+		<div class="container">
+		  <div class="row">
+		    <div class="col-md-12">
+		      <h2 class="titulo">Titulo</h2>
+		    </div>
+			</div>
+		  </div>
+		</div>
+	</section>
+	<!-- bloque2 gris -->
+	<section>
+		<div class="container bloque1">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="subtitulo">Titulo</h3>
+				</div>
+			</div>
+		</div>
+		<div class="container bloque1">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="" ng-controller="textoBloque">
+							<h3 class="subtitulo">lorem ipsum</h3>
+							<ul>
+								<li ng-repeat="text in text">{{text.texto01}}</li>
+							</ul>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="bloque1-blanco">
+						<div class="col-sm-8 col-md-8">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+						<div class="col-md-4">
+							<h5 class="bloque-1-blanco-monto">$2.000.000.000-</h5>
+						</div>
+						<div class="col-sm-8 col-md-8">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+						</div>
+						<div class="col-md-4">
+							<h5 class="bloque-1-blanco-monto">$2.000.000.000-</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--Fin bloque1 gris -->
+<!-- bloque2 gris -->
+	<section ng-controller="sCartCtrl">
+		<div class="container bloque2">
+		  <div class="row">
+				<div class="col-xs-8 col-sm-10 col-md-11">
+					<p class="subtitulo">Total items</p>
+				</div>
+				<div class="col-xs-4 col-sm-2 col-md-1">
+					<button type="button" class="btn btn-default" ng-click="ngShowhideFun(ngShowhide)">{{ngShowhide ? 'Cerrar' : 'Abrir'}}</button>
+				</div>
+		  </div>
+		</div>
+		<div class="container bloque3" ng-show="ngShowhide">
+		  <div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+              <div class='input-group date' id='datetimepicker1'>
+                  <input type='text' class="form-control"  placeholder="Seleccione..." />
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+              </div>
+          </div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+              <div class='input-group date' id='datetimepicker2'>
+                  <input type='text' class="form-control" placeholder="Seleccione..." />
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+              </div>
+          </div>
+				</div>
+				<div class="col-md-3">
+					<form>
+			     <div class="form-group">
+			       <select class="form-control" id="sel1"  placeholder="Seleccione..." >
+			         <option>Seleccione...</option>
+			         <option>1</option>
+			         <option>2</option>
+			         <option>3</option>
+			       </select>
+			     </div>
+			   </form>
+				</div>
+				<div class="col-md-9">
+					<div class="form-group">
+					  <input type="text" class="form-control" id="usr" placeholder="Busqueda general">
+					</div>
+				</div>
+				<div class="col-md-1 col-md-offset-2">
+					<button type="button" class="btn btn-success">Buscar</button>
+				</div>
+		  </div>
+		</div>
+	</section>
+<!--Fin bloque2 gris -->
+<!-- bloque3 tabla -->
+	<section>
+		<div class="container bloque4">
+		  <div class="row">
+		    <div ng-controller="textotabla">
+					<table class="table" >
+				    <thead>
+				      <tr>
+								<th></th>
+				        <th>Lorem </th>
+				        <th>ipsum</th>
+				        <th>dolor</th>
+								<th>sit</th>
+								<th>amet</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr ng-repeat="textable in textable">
+								<td>
+								<input type="checkbox" value="">
+								</td>
+				        <td>{{textable.texto01}}</td>
+				        <td>{{textable.texto02}}</td>
+				        <td>{{textable.texto03}}</td>
+								<td>{{textable.texto04}}</td>
+								<td>{{textable.monto}}</td>
+				      </tr>
+				    </tbody>
+				  </table>
+		    </div>
+		  </div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="row">
+	    	<div class="col-md-5 col-md-offset-4">
+					<ul class="pagination">
+						<li><a href=""><</a></li>
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+						<li><a href="">6</a></li>
+						<li><a href="">7</a></li>
+						<li><a href="">8</a></li>
+						<li><a href="">9</a></li>
+						<li><a href="">></a></li>
+					</ul>
+	    	</div>
+			</div>
+		</div>
+	</section>
+	<!-- bloque3 tabla -->
+	<script type="text/javascript">
+			$(function () {
+					$('#datetimepicker1').datetimepicker();
+			});
+			$(function () {
+					$('#datetimepicker2').datetimepicker();
+			});
 
-		<p>Hola Mundo</p>
+	</script>
 
 	</body>
 </html>

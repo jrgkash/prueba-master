@@ -1,0 +1,27 @@
+{
+  "description": "An HTML Import for Robot, with local font files",
+  "keywords": [
+    "font",
+    "roboto"
+  ],
+  "homepage": "https://github.com/PolymerElements/font-roboto-local",
+  "name": "@polymer/font-roboto-local",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PolymerElements/font-roboto-local"
+  },
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.0.3",
+    "webmat": "^0.2.2",
+    "@polymer/gen-typescript-declarations": "^1.5.1"
+  },
+  "scripts": {
+    "format": "webmat",
+    "generate-types": "gen-typescript-declarations --deleteExisting --outDir . --verify",
+    "prepare": "npm run generate-types"
+  },
+  "version": "3.0.2",
+  "main": "roboto.js",
+  "author": "The Polymer Project Authors"
+}

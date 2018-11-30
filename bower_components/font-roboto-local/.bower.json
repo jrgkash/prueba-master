@@ -1,0 +1,16 @@
+{
+  "name": "font-roboto-local",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/PolymerElements/font-roboto-local",
+  "version": "3.0.2",
+  "_release": "3.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.0.2",
+    "commit": "788ed90d28cfa528a430e4b21088d588509b6670"
+  },
+  "_source": "https://github.com/PolymerElements/font-roboto-local.git",
+  "_target": "^3.0.2",
+  "_originalSource": "font-roboto-local",
+  "_direct": true
+}
